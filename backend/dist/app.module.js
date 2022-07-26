@@ -10,6 +10,7 @@ exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
 const config_1 = require("@nestjs/config");
 const typeorm_1 = require("@nestjs/typeorm");
+const users_module_1 = require("./users/users.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -30,7 +31,8 @@ AppModule = __decorate([
                     autoLoadEntities: true,
                     logging: true,
                 })
-            })
+            }),
+            users_module_1.UsersModule
         ],
         providers: [],
     })
