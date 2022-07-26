@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -9,7 +10,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       imports: [ConfigModule],
       inject: [ConfigService],
       useFactory: async (config: ConfigService) => ({
-        type: config.get<"postgres">('TYPEORM_CONNECTION'),
+        type: config.get<"aurora-postgres">('TYPEORM_CONNECTION'),
         username: config.get<string>('TYPEORM_USERNAME'),
         password: config.get<string>('TYPEORM_PASSWORD'),
         database: config.get<string>('TYPEORM_DATABASE'),
@@ -20,7 +21,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         logging: true,
 
       })
-    })
+    }),
+    UsersModule
   ],
   providers: [],
 })
