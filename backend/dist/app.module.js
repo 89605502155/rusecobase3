@@ -11,12 +11,20 @@ const common_1 = require("@nestjs/common");
 const config_1 = require("@nestjs/config");
 const typeorm_1 = require("@nestjs/typeorm");
 const users_module_1 = require("./users/users.module");
+const graphql_1 = require("@nestjs/graphql");
+const apollo_1 = require("@nestjs/apollo");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     (0, common_1.Module)({
         imports: [
             config_1.ConfigModule.forRoot({ isGlobal: true, envFilePath: '../.env' }),
+            graphql_1.GraphQLModule.forRoot({
+                driver: apollo_1.ApolloDriver,
+                autoSchemaFile: 'schema.gql',
+                sortSchema: true,
+                playground: true,
+            }),
             typeorm_1.TypeOrmModule.forRootAsync({
                 imports: [config_1.ConfigModule],
                 inject: [config_1.ConfigService],
