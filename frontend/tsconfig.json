@@ -2,8 +2,6 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "jsx": "react",
-    "allowSyntheticDefaultImports": true,
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
