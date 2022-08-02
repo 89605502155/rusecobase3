@@ -1,30 +1,23 @@
-<nav class="bg-black">
-  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-    <div class="relative flex items-center justify-between h-16">
-      <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-        <h3 class="flex-shrink-0 flex items-center font-bold uppercase text-white">russian north ecology base</h3>
-        <div class="hidden sm:block sm:ml-6">
-            <div class="flex space-x-4">
-              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a href="/" class="text-white hover:text-opacity-75 px-3 py-2 rounded-md text-sm font-medium uppercase" aria-current="page">Map</a>
-              <a href="/expeditions" class="text-gray-300  hover:text-opacity-75 px-3 py-2 rounded-md text-sm font-medium uppercase">Expeditions</a>
-              <a href="/news" class="text-gray-300  hover:text-opacity-75 px-3 py-2 rounded-md text-sm font-medium uppercase">News</a>
-          </div>
-        </div>
-      </div>
-    </div>
+<nav class="p-5 bg-white shadow-xl md:flex md:items-center md:justify-between">
+  <div class="flex justify-between items-center">
+    <span class="text-2xl text-black uppercase cursor-pointer ">russian north ecology base</span>
+
   </div>
 
-
-
-  <!-- Mobile menu, show/hide based on menu state. -->
-  <div class="sm:hidden" id="mobile-menu">
-    <div class="px-2 pt-2 pb-3 space-y-1">
-      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-      <a href="/" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium uppercase" aria-current="page">map</a>
-      <a href="/expeditions" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">expeditions</a>
-      <a href="/news" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium uppercase">news</a>
-
-    </div>
-  </div>
+  <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto
+  md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+    <li class="mx-5 my-6 md:my-0">
+      <a href="/home" class="text-lg text-black hover:text-damaskrose hover:underline duration-500">home</a>
+    </li>
+    <li class="mx-5 my-6 md:my-0">
+      <a href="/" class="text-lg text-black hover:text-damaskrose hover:underline duration-500">map</a>
+    </li>
+    <li class="mx-5 my-6 md:my-0">
+      <a href="/expeditions" class="text-lg text-black hover:text-damaskrose hover:underline duration-500">expeditions</a>
+    </li>
+    <button class="bg-transparent text-black uppercase duration-500 hover:bg-damaskrose hover:text-white py-2 px-4 border border-black hover:border-damaskrose rounded">
+      Log In
+    </button>
+  </ul>
 </nav>
+

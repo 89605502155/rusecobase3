@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationBar } from './components/navigation/navigation.component';
+import { IonicModule } from '@ionic/angular';
+
 
 @NgModule({
   declarations: [
@@ -12,7 +14,8 @@ import { NavigationBar } from './components/navigation/navigation.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    IonicModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
