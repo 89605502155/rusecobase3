@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationBar } from './components/navigation/navigation.component';
-import { IonicModule } from '@ionic/angular';
+import { MatSliderModule } from '@angular/material/slider';
 
 
 @NgModule({
@@ -15,7 +15,7 @@ import { IonicModule } from '@ionic/angular';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    IonicModule.forRoot()
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

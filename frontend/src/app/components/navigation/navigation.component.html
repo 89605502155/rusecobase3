@@ -1,23 +1,18 @@
-<nav class="p-5 bg-white shadow-xl md:flex md:items-center md:justify-between">
-  <div class="flex justify-between items-center">
-    <span class="text-2xl text-black uppercase cursor-pointer ">russian north ecology base</span>
-
-  </div>
-
-  <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto
-  md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
-    <li class="mx-5 my-6 md:my-0">
-      <a href="/home" class="text-lg text-black hover:text-damaskrose hover:underline duration-500">home</a>
+<nav id="navdashboard" class="bg-white shadow-2xl">
+  <ul class="flex justify-between ">
+    <li>
+      <h3 class="nameheader text-lg text-black uppercase cursor-pointer ">russian north ecology base</h3>
     </li>
-    <li class="mx-5 my-6 md:my-0">
-      <a href="/" class="text-lg text-black hover:text-damaskrose hover:underline duration-500">map</a>
+    <li class="burger" (click)="toggleNavbar()">
+      <i class="material-icons">{{showMenu?"close":"menu"}}</i>
     </li>
-    <li class="mx-5 my-6 md:my-0">
-      <a href="/expeditions" class="text-lg text-black hover:text-damaskrose hover:underline duration-500">expeditions</a>
+    <li class="menu" [class.is-open]="showMenu">
+      <a class="menu-item text-lg text-black hover:text-damaskrose hover:underline duration-500">home</a>
+      <a class="menu-item text-lg text-black hover:text-damaskrose hover:underline duration-500">map</a>
+      <a class="menu-item text-lg text-black hover:text-damaskrose hover:underline duration-500">expeditions</a>
+      <button class="bg-transparent text-black uppercase duration-500 hover:bg-damaskrose hover:text-white py-2 px-4 border border-black hover:border-damaskrose rounded">
+        Log In
+      </button>
     </li>
-    <button class="bg-transparent text-black uppercase duration-500 hover:bg-damaskrose hover:text-white py-2 px-4 border border-black hover:border-damaskrose rounded">
-      Log In
-    </button>
   </ul>
 </nav>
-
