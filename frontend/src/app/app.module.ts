@@ -3,19 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavigationBar } from './components/navigation/navigation.component';
-import { MatSliderModule } from '@angular/material/slider';
-
+import { LayoutComponent } from './components/ui/layout/layout.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeaderModule } from './components/ui/layout/header/header.module';
+import { LayoutModule } from './components/ui/layout/layout.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavigationBar
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatSliderModule
+    BrowserAnimationsModule,
+    LayoutModule,
+    HeaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
