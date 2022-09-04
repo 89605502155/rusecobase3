@@ -23,6 +23,13 @@ export class HeaderComponent implements OnInit {
       name: 'expeditions'
     }
   ]
+
+  showMenu = false;
+  toggleNavbar(){
+    this.showMenu = !this.showMenu;
+  }
+
+
   constructor() { }
 
   ngOnInit(): void {

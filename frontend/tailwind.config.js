@@ -5,22 +5,27 @@ module.exports = {
   ],
   theme: {
     screens: {
-      '2xl': {'max': '1535px'},
-      // => @media (max-width: 1535px) { ... }
+      '2xl': {'min': '1280px'},
+      // => @media (min-width: 1280px) { ... }
 
       'xl': {'max': '1279px'},
       // => @media (max-width: 1279px) { ... }
 
-      'lg': {'max': '1023px'},
-      // => @media (max-width: 1023px) { ... }
+      'lg': {'max': '888px','min':'658px'},
+      // => @media (max-width: 888px) { ... }
 
-      'md': {'max': '767px'},
-      // => @media (max-width: 767px) { ... }
+      'md': {'max': '657px','min':'440px'},
+      // => @media (max-width: 657px) { ... }
 
-      'sm': {'max': '639px'},
-      // => @media (max-width: 639px) { ... }
+      'sm': {'max': '439px'},
+      // => @media (max-width: 439px) { ... }
     },
-    extend: { },
+    extend: {
+      colors:{
+        "black":'#000000',
+        "damaskrose":'#FF4364'
+      }
+    },
   },
   plugins: [],
 }

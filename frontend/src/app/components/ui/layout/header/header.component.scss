@@ -14,11 +14,12 @@
           align-items: center;
           @apply text-white hover:text-green-800 relative flex align-middle justify-center;
 
+          /*active page*/
           &.active{
-            @apply text-purple-700;
+            @apply text-damaskrose;
 
             &::after{
-              @apply w-full bg-yellow-500;
+              @apply w-full bg-damaskrose;
             }
           }
 
