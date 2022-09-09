@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IStation } from 'src/app/services/station/station.interface';
+import { StationsService } from 'src/app/services/stations.service';
 
 @Component({
   selector: 'app-map',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapComponent implements OnInit {
 
-  constructor() { }
+  stations: IStation[]=[]
+
+  constructor(private stationServece:StationsService) { }
 
   ngOnInit(): void {
+    this.stationServece.getAll().subscribe(data => {
+      this.stations=data
+    })
   }
 
 }

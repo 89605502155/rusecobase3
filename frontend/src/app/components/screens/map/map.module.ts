@@ -4,6 +4,7 @@ import { MapComponent } from './map.component';
 import { StationsItemComponent } from './stations-item/stations-item.component';
 import { SearchComponent } from './search/search.component';
 import { FiltersComponent } from './filters/filters.component';
+import { StationsService } from 'src/app/services/stations.service';
 
 
 
