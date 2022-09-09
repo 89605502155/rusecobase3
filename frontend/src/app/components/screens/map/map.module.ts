@@ -5,6 +5,8 @@ import { StationsItemComponent } from './stations-item/stations-item.component';
 import { SearchComponent } from './search/search.component';
 import { FiltersComponent } from './filters/filters.component';
 import { StationsService } from 'src/app/services/stations.service';
+import { RouterModule } from '@angular/router';
+import { LeafletmapComponent } from './leafletmap/leafletmap.component';
 
 
 
@@ -13,10 +15,12 @@ import { StationsService } from 'src/app/services/stations.service';
     MapComponent,
     StationsItemComponent,
     SearchComponent,
-    FiltersComponent
+    FiltersComponent,
+    LeafletmapComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class MapModule { }

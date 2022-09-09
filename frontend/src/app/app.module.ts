@@ -8,6 +8,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderModule } from './components/ui/layout/header/header.module';
 import { LayoutModule } from './components/ui/layout/layout.module';
 import { HttpClientModule } from '@angular/common/http';
+import { MapModule } from './components/screens/map/map.module';
+import { LeafletstationsService } from './services/leafletstations.service';
+import { LeafletPopupService } from './services/leaflet-popup.service';
 
 @NgModule({
   declarations: [
@@ -19,9 +22,13 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     LayoutModule,
     HeaderModule,
-    HttpClientModule
+    HttpClientModule,
+    MapModule
   ],
-  providers: [],
+  providers: [
+    LeafletstationsService,
+    LeafletPopupService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

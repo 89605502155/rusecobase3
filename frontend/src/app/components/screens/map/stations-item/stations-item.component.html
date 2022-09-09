@@ -1,1 +1,3 @@
-<p>stations-item works!</p>
+<a [routerLink]="['/station/'+station.name]" class="bg-yellow-400">
+  <p class="bg-red-500">{{station.name}}  {{station.lon | currency: 'Longitude'}}</p>
+</a>

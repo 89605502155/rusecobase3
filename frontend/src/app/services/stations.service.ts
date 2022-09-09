@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IStation } from './station/station.interface';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -14,4 +15,5 @@ export class StationsService {
   getAll() {
     return this.http.get<IStation[]>(this.API_URL)
   }
+
 }
