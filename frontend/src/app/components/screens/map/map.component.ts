@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { IStation } from 'src/app/services/station/station.interface';
 import { StationsService } from 'src/app/services/stations.service';
 

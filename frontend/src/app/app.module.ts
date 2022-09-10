@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MapModule } from './components/screens/map/map.module';
 import { LeafletstationsService } from './services/leafletstations.service';
 import { LeafletPopupService } from './services/leaflet-popup.service';
+import { GraphQLModule } from './graphql.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { LeafletPopupService } from './services/leaflet-popup.service';
     LayoutModule,
     HeaderModule,
     HttpClientModule,
-    MapModule
+    MapModule,
+    GraphQLModule
   ],
   providers: [
     LeafletstationsService,
